@@ -1,0 +1,8 @@
+<button (click)="check()">check</button>
+
+<input (keydown.enter)="save(message.value)" #message>
+
+<div *ngFor="let message of data">
+
+    <h1>{{message.message}}</h1>
+</div>
