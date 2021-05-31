@@ -10,6 +10,7 @@ app.use(cors());
 let temp = [];
 app.get("/home", async (req, res) => {
     await res.send(temp);
+
 })
 
 
@@ -29,11 +30,13 @@ io.on('connection', (socket) => {
     console.log('user connected:' + socket.id);
     //mỗi khi front end emit gọi lại
     socket.on('message', data => {
-        io.emit('message', temp);
+        console.log(data);
+        // io.emit('message', temp);
+
     })
 });
 
 
-server.listen(8080, '192.168.1.4', () => {
-    console.log("running on port 192.168.1.4:8080")
+server.listen(8080, '192.168.1.5', () => {
+    console.log("running on port 192.168.1.5:8080")
 })

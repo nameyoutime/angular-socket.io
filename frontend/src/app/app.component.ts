@@ -16,11 +16,11 @@ export class AppComponent implements OnInit {
     //listen to event from the socket.io server
     this.websocket.listen('message').subscribe((data) => {
       this.data = data;
-    })
+    });
   }
   constructor(private websocket: WebsocketService, private httpSer: HttpService) { }
 
-  async check() {
+  check() {
     console.log(this.data);
   }
 

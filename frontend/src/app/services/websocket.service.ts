@@ -13,7 +13,6 @@ export class WebsocketService {
   }
 
   listen(eventName: string) {
-
     return new Observable((subcriber) => {
       this.socket.on(eventName, (data) => {
         subcriber.next(data);

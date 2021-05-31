@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  endpoint:"http://192.168.1.4:8080/",
-  SOCKET_ENDPOINT:"http://192.168.1.4:8080"
+  endpoint:"http://10.104.17.120:8080/",
+  SOCKET_ENDPOINT:"http://10.104.17.120:8080"
 };
 
 /*
